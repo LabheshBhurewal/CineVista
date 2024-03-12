@@ -1,10 +1,9 @@
 import React from 'react'
 import './App.scss'
+import Home from './home/Home';
 
 const App = () => {
-  return (
-    <div className="App">Edit App.scss to remove this border</div>
-  )
+  return <Home/>;
 }
 
 export default App
