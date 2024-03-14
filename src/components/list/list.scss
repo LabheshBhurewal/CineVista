@@ -1,0 +1,28 @@
+.list{
+    width: 100%;
+    margin-top: 5px;
+
+    .listTitle{
+        font-weight: 300;
+        font-size: 18px;
+        color: white;
+        margin-left: 50px;
+    }
+
+    .wrapper{
+        display: flex;
+        
+    .sliderArrow{
+        width: 50px;
+        height: 100%;
+        background-color: black;
+    }
+
+       .container{
+        display: flex;
+        margin-left: 50px;
+        width: max-content;
+       }
+
+    }
+}
