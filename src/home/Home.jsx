@@ -10,6 +10,7 @@ const home = () => {
         <Navbar/>
         <Featured type="movie"/>
         <List/>
+        <List/>
        
     </div>
   )

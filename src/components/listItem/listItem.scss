@@ -1,6 +1,14 @@
 .listItem{
    width:225px;
    height:125px;
-   background-color:white;
+   background-color:red;
    margin-right: 10px;
+   overflow: hidden;
+   cursor: pointer;
+
+   img{
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+   }
 }
