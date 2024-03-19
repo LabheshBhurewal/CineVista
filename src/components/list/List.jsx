@@ -6,16 +6,15 @@ import ListItem from "../listItem/ListItem"
 import { useRef } from 'react';
 const List = () => {
 
-  const[IsMoved,setIsMoved]=useState(false)
+ const [ isMoved,setIsMoved]=useState(false)
  const [ slideNumber, setSlideNumber]=useState(0)
 
   const listRef = useRef()
 
   const handleClick = (direction) =>{
-
+    setIsMoved(true)
     let distance = listRef.current.getBoundingClientRect().x -50
     if(direction === "left"  && slideNumber > 0){
-      setIsMoved(true)
       setSlideNumber(slideNumber - 1);
        listRef.current.style.transform =`translateX(${230 + distance}px)`
     }
@@ -23,7 +22,7 @@ const List = () => {
       setSlideNumber(slideNumber + 1);
        listRef.current.style.transform =`translateX(${-230 + distance}px)`
     }
-    // console.log(distance)
+
   }
   return (
     <div className='list'>
@@ -31,7 +30,7 @@ const List = () => {
         <div className="wrapper">
            <ArrowBackIosOutlinedIcon className="sliderArrow left" 
            onClick={()=>handleClick("left")}
-           style={{display: !IsMoved && "none"}}/>
+           style={{display: !isMoved && "none"}}/>
             <div className="container" ref={listRef}>
                <ListItem index={0}/>
                <ListItem index={1}/>
@@ -45,7 +44,8 @@ const List = () => {
                <ListItem index={9}/>
                
             </div>
-            <ArrowForwardIosIcon className="sliderArrow right" onClick={()=>handleClick("right")}/>
+            <ArrowForwardIosIcon className="sliderArrow right" 
+            onClick={()=>handleClick("right")}/>
            
         </div>
     </div>

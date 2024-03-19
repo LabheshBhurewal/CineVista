@@ -1,16 +1,20 @@
 .register{
     width: 100vw;
     height: 100vh;
-    // background:url("https://cdn.hipwallpaper.com/i/98/21/dUyCkp.jpg");
+    background:url("https://cdn.wallpapersafari.com/33/55/Zq8pci.jpg");
+    object-fit: cover;
+    position: relative;
+    background-position: center;
+    background-size: cover;
     .top{
         .wrapper{
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 20px 50px;
+
             .logo{
                 height: 40px;
-
             }
 
             .logInButton{
@@ -35,6 +39,8 @@
         justify-content: center;
         position: absolute;
         color: white;
+        left: 0;
+        top: 0;
         
         h1{
             font-size: 30px;
@@ -47,7 +53,6 @@
 
         p{
             font-size: 20px;
-
         }
 
         .input{
@@ -57,9 +62,10 @@
             align-items: center;
             justify-content: space-between;
             background-color: white;
+            border-radius: 10px;
 
             input{
-                border: none;
+                 border: none;
                  flex: 9;
                  height: 100%;
                  padding: 0px 10px;
